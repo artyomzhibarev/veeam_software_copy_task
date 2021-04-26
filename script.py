@@ -1,22 +1,26 @@
-import os.path
+import os
 import shutil
 from typing import AnyStr
 import xml.etree.ElementTree as ET
 
 
-def xml_parser(xml_file: AnyStr):
+def xml_parser(xml_file: AnyStr) -> None:
     tree = ET.parse(xml_file)
-    root = tree.getroot()
-    for child in root:
-        source_path = child.attrib['source_path']
-        destination_path = child.attrib['destination_path']
-        file_name = child.attrib['file_name']
-        # print(source_path, destination_path, file_name)
+    config_root = tree.getroot()
+    for file in config_root:
+        file_name = file.attrib['file_name']
+        source_path = os.path.join(file.attrib['source_path'], file_name)
+        destination_path = os.path.join(file.attrib['destination_path'], file_name)
+        path = os.path.dirname(destination_path)
+        if os.path.exists(source_path) and os.path.exists(os.path.dirname(destination_path)):
+            shutil.copyfile(source_path, destination_path)
 
 
-def copy_file(src_, dst_, filename):
-    shutil.copyfile(src=src_ + filename, dst=dst_ + filename)
+
+# def copy_file(src_, dst_):
+#     shutil.copy(src=src_, dst=dst_)
 
 
 if __name__ == '__main__':
-    xml_parser('config.xml')
+    print(xml_parser('config.xml'))
+    # print(os.path.join('sdf', 'aea'))
