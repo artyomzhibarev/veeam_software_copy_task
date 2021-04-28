@@ -7,6 +7,7 @@ class XmlDeserializer:
     def __init__(self, config):
         self.config = config
 
+    @property
     def deserializer(self):
         tree = ET.parse(self.config)
         config_root = tree.getroot()
@@ -18,7 +19,7 @@ class XmlDeserializer:
 
 
 class File:
-    def __init__(self, file_name, src_path, dst_path):
+    def __init__(self, file_name, src_path, dst_path) -> None:
         self.file_name = file_name
         if not os.path.isabs(src_path):
             src_path = os.path.abspath(src_path)
@@ -40,7 +41,7 @@ class FileProvider:
 
 def main(xml_file):
     xml_des = XmlDeserializer(xml_file)
-    parser = xml_des.deserializer()
+    parser = xml_des.deserializer
 
     for file in parser:
         if FileProvider.path_validator(file):

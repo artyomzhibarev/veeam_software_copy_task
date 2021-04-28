@@ -1,20 +1,20 @@
 <config>
-<!--    <file-->
-<!--            source_path="/Users/artyomzhibarev/PycharmProjects/veeam_software_copy_task/folder_src"-->
-<!--            destination_path="/Users/artyomzhibarev/PycharmProjects/veeam_software_copy_task/folder_dst"-->
-<!--            file_name="folder_file.dll"-->
-<!--    />-->
-<!--    <file-->
-<!--            source_path="/Users/artyomzhibarev/PycharmProjects/veeam_software_copy_task/folder_src"-->
-<!--            destination_path="/Users/artyomzhibarev/PycharmProjects/veeam_software_copy_task/folder_dst/inner_folder_dst"-->
-<!--            file_name="ksdmfksf.txt"-->
-<!--    />-->
+    <file
+            source_path="/Users/artyomzhibarev/PycharmProjects/veeam_software_copy_task/folder_src"
+            destination_path="/Users/artyomzhibarev/PycharmProjects/veeam_software_copy_task/folder_dst"
+            file_name="folder_file.dll"
+    />
+    <file
+            source_path="/Users/artyomzhibarev/PycharmProjects/veeam_software_copy_task/folder_src"
+            destination_path="/Users/artyomzhibarev/PycharmProjects/veeam_software_copy_task/folder_dst/inner_folder_dst"
+            file_name="ksdmfksf.txt"
+    />
 
-<!--    <file-->
-<!--            source_path="C:\Windows\system32"-->
-<!--            destination_path="C:\Program files"-->
-<!--            file_name="kernel32.dll"-->
-<!--    />-->
+    <file
+            source_path="C:\Windows\system32"
+            destination_path="C:\Program files"
+            file_name="kernel32.dll"
+    />
     <file
             source_path="/var/log"
             destination_path="/etc"
