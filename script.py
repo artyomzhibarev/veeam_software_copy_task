@@ -2,6 +2,8 @@ import os
 import shutil
 import xml.etree.ElementTree as ET
 
+CONFIG = 'config.xml'
+
 
 class XmlDeserializer:
     def __init__(self, config):
@@ -49,4 +51,4 @@ def main(xml_file):
 
 
 if __name__ == "__main__":
-    main('config.xml')
+    main(CONFIG)
