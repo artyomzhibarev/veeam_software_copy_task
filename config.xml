@@ -16,8 +16,8 @@
             file_name="kernel32.dll"
     />
     <file
-            source_path="/var/log"
-            destination_path="/etc"
+            source_path="var/log"
+            destination_path="etc"
             file_name="server.log"
     />
 

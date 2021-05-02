@@ -2,7 +2,12 @@ import os
 import shutil
 import xml.etree.ElementTree as ET
 
-CONFIG = 'config.xml'
+
+def search_xml_file_in_current_dir():
+    for file in os.listdir(os.getcwd()):
+        if os.path.isfile(os.path.join(os.getcwd(), file)) and file.endswith('.xml'.lower()):
+            return os.path.abspath(file)
+    raise FileNotFoundError
 
 
 class XmlDeserializer:
@@ -51,4 +56,5 @@ def main(xml_file):
 
 
 if __name__ == "__main__":
+    CONFIG = search_xml_file_in_current_dir()
     main(CONFIG)
