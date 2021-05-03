@@ -9,7 +9,7 @@
 Конфигурационный файл:
 
 
-<pre>
+```<pre>
 <code>
 &lt;config&gt;
     &lt;file
@@ -25,3 +25,4 @@
 &lt;/config&gt;
 </code>
 </pre>
+```
